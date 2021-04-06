@@ -666,7 +666,8 @@
       </div>
       <div class="row">
         <div class="contact-form">
-          <form>
+          <form class="" method="POST">
+            {% csrf_token %}
             <div class="row">
               <div class="w-50">
                 <div class="input-group outer-shadow hover-in-shadow">
@@ -681,7 +682,7 @@
               </div>
               <div class="w-50">
                 <div class="input-group outer-shadow hover-in-shadow">
-                  <textarea class="input-control" placeholder="Message"></textarea>
+                  <textarea name='message' class="input-control" placeholder="Message"></textarea>
                 </div>
               </div>
             </div>
